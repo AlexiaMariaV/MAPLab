@@ -35,13 +35,21 @@ public class Main {
         System.out.println("Min sum: " + numbersArray.minSum());
 
 
-        int[] binNums1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
-        int[] binNums2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
-        BigNumber bnum1 = new BigNumber(binNums1);
-        BigNumber bnum2 = new BigNumber(binNums2);
+        int[] bigNums1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] bigNums2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+        BigNumber bnum1 = new BigNumber(bigNums1);
+        BigNumber bnum2 = new BigNumber(bigNums2);
         BigNumber sum = BigNumber.add(bnum1, bnum2);
         System.out.println("Sum: ");
         sum.showNumbers();
+        int[] bigNums3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] bigNums4 = {5, 4, 0, 0, 0, 0, 0, 0, 0};
+        BigNumber bnum3 = new BigNumber(bigNums3);
+        BigNumber bnum4 = new BigNumber(bigNums4);
+        BigNumber diff = BigNumber.subtract(bnum3, bnum4);
+        System.out.println("Difference: ");
+        diff.showNumbers();
+
     }
 
 }

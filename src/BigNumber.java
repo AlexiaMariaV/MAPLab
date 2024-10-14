@@ -30,4 +30,21 @@ public class BigNumber {
         }
         return new BigNumber(sum);
     }
+
+    public static BigNumber subtract(BigNumber bnum1, BigNumber bnum2) {
+        int length = bnum1.bigNumbers.length;
+        int[] diff = new int[length];
+        int borrow = 0;
+        for (int i = length-1; i >= 0; i--) {
+            int helpingDiff = bnum1.bigNumbers[i] - bnum2.bigNumbers[i] - borrow;
+            if (helpingDiff < 0){
+                helpingDiff = helpingDiff + 10;
+                borrow = 1;
+            } else {
+                borrow = 0;
+            }
+            diff[i] = helpingDiff;
+        }
+        return new BigNumber(diff);
+    }
 }
