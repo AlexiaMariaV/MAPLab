@@ -35,5 +35,15 @@ public class Grades {
         return roundedGrades;
     }
 
+    public double averageGrade() {
+        int sum = 0;
+        for(int i = 0; i < grades.length; i++) {
+            sum += grades[i];
+        }
+        double average = (double) sum / grades.length;
+        average = ((int) (average * 100.0)) / 100.0;
+        return average;
+    }
+
 }
 
