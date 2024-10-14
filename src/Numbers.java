@@ -21,4 +21,20 @@ public class Numbers {
         }
         return min;
     }
+    public int maxSum(){
+        int sum = 0;
+        int min = minNumber();
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum - min;
+    }
+    public int minSum(){
+        int sum = 0;
+        int max = maxNumber();
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum - max;
+    }
 }

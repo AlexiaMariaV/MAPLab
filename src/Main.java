@@ -31,6 +31,8 @@ public class Main {
         Numbers numbersArray = new Numbers(numbers);
         System.out.println("Max number: " + numbersArray.maxNumber());
         System.out.println("Min number: " + numbersArray.minNumber());
+        System.out.println("Max sum: " + numbersArray.maxSum());
+        System.out.println("Min sum: " + numbersArray.minSum());
     }
 
 }
