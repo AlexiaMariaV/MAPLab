@@ -24,6 +24,13 @@ public class Main {
         }
         System.out.println("]");
         System.out.println("Max Grade: " + grades.getMaxGrade());
+
+
+
+        int[] numbers = {4, 8, 3, 10, 17};
+        Numbers numbersArray = new Numbers(numbers);
+        System.out.println("Max number: " + numbersArray.maxNumber());
+        System.out.println("Min number: " + numbersArray.minNumber());
     }
 
 }
