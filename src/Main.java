@@ -54,6 +54,9 @@ public class Main {
         BigNumber product = BigNumber.multiply(bnum5,2);
         System.out.println("Product: ");
         product.showNumbers();
+        BigNumber division = BigNumber.divide(bnum5,2);
+        System.out.println("Division: ");
+        division.showNumbers();
 
     }
 

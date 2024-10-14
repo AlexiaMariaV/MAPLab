@@ -67,4 +67,17 @@ public class BigNumber {
         }
         return new BigNumber(product);
     }
+
+    public static BigNumber divide(BigNumber bnum, int digit) {
+        int length = bnum.bigNumbers.length;
+        int[] div = new int[length];
+        int rest = 0;
+
+        for (int i = 0; i < length; i++){
+            int helpingDiv = rest * 10 + bnum.bigNumbers[i];
+            div[i] = helpingDiv / digit;
+            rest = helpingDiv % digit;
+        }
+        return new BigNumber(div);
+    }
 }
