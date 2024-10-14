@@ -45,5 +45,16 @@ public class Grades {
         return average;
     }
 
+    public int getMaxGrade() {
+        int[] roundedGrades = getRoundedGrades();
+        int max = roundedGrades[0];
+        for(int i = 0; i < roundedGrades.length; i++) {
+            if(roundedGrades[i] > max) {
+                max = roundedGrades[i];
+            }
+        }
+        return max;
+    }
+
 }
 
