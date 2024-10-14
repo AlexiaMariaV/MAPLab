@@ -33,6 +33,15 @@ public class Main {
         System.out.println("Min number: " + numbersArray.minNumber());
         System.out.println("Max sum: " + numbersArray.maxSum());
         System.out.println("Min sum: " + numbersArray.minSum());
+
+
+        int[] binNums1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] binNums2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+        BigNumber bnum1 = new BigNumber(binNums1);
+        BigNumber bnum2 = new BigNumber(binNums2);
+        BigNumber sum = BigNumber.add(bnum1, bnum2);
+        System.out.println("Sum: ");
+        sum.showNumbers();
     }
 
 }
