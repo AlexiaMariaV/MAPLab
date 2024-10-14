@@ -13,6 +13,16 @@ public class Main {
         System.out.println("]");
 
         System.out.println("Average grade: " + grades.averageGrade());
+
+        int[] roundedGrades = grades.getRoundedGrades();
+        System.out.print("Rounded grades: [");
+        for (int i = 0; i < roundedGrades.length; i++) {
+            System.out.print(roundedGrades[i]);
+            if (i < roundedGrades.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
     }
 
 }
