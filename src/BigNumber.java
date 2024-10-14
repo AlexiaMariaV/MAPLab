@@ -47,4 +47,24 @@ public class BigNumber {
         }
         return new BigNumber(diff);
     }
+
+    public static BigNumber multiply(BigNumber bnum, int digit) {
+        int length = bnum.bigNumbers.length;
+        int[] product = new int[length + 1];
+        int carry = 0;
+        for (int i = length-1; i >= 0; i--) {
+            int helpingProduct = bnum.bigNumbers[i] * digit + carry;
+            product[i+1] = helpingProduct % 10;
+            carry = helpingProduct / 10;
+        }
+        product[0] = carry;
+        if (product[0] == 0){
+            int[] productWithoutFrontZero = new int[length];
+            for (int i = 0; i < length; i++){
+                productWithoutFrontZero[i] = product[i+1];
+            }
+            return new BigNumber(productWithoutFrontZero);
+        }
+        return new BigNumber(product);
+    }
 }

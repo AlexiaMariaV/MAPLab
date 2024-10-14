@@ -49,6 +49,11 @@ public class Main {
         BigNumber diff = BigNumber.subtract(bnum3, bnum4);
         System.out.println("Difference: ");
         diff.showNumbers();
+        int[] bigNums5 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        BigNumber bnum5 = new BigNumber(bigNums5);
+        BigNumber product = BigNumber.multiply(bnum5,2);
+        System.out.println("Product: ");
+        product.showNumbers();
 
     }
 
