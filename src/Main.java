@@ -58,6 +58,12 @@ public class Main {
         System.out.println("Division: ");
         division.showNumbers();
 
+
+        int[] keyboards = {15, 20, 10, 35};
+        int[] usbs = {20, 15, 40, 15};
+        ElectronicsShop eshop = new ElectronicsShop(keyboards, usbs);
+        System.out.println("Cheapest keyboard: " + eshop.findCheapestKeyboard());
+        System.out.println("Most expensive item: " + eshop.findMostExpensive());
     }
 
 }
