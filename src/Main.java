@@ -64,6 +64,7 @@ public class Main {
         ElectronicsShop eshop = new ElectronicsShop(keyboards, usbs);
         System.out.println("Cheapest keyboard: " + eshop.findCheapestKeyboard());
         System.out.println("Most expensive item: " + eshop.findMostExpensive());
+        System.out.println("Most expensive USB with budget: " + eshop.findMostExpensiveUSBWithBudget(30));
     }
 
 }

@@ -32,5 +32,13 @@ public class ElectronicsShop {
         return max;
     }
 
-
+    public int findMostExpensiveUSBWithBudget(int budget){
+        int maxUSBWithBudget = -1;
+        for(int i = 0; i < usbs.length; i++){
+            if(usbs[i] <= budget && usbs[i] > maxUSBWithBudget){
+                maxUSBWithBudget = usbs[i];
+            }
+        }
+        return maxUSBWithBudget;
+    }
 }
