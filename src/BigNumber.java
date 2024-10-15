@@ -45,6 +45,14 @@ public class BigNumber {
             }
             diff[i] = helpingDiff;
         }
+        int i = 0;
+        while (i < length-1 && diff[i] == 0){
+            i++;
+        }
+        int[] diffWithoutFrontZero = new int[length-i];
+        for(int j = 0; j < length; j++){
+            diffWithoutFrontZero[j] = diff[i+j];
+        }
         return new BigNumber(diff);
     }
 
