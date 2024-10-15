@@ -65,6 +65,10 @@ public class Main {
         System.out.println("Cheapest keyboard: " + eshop.findCheapestKeyboard());
         System.out.println("Most expensive item: " + eshop.findMostExpensive());
         System.out.println("Most expensive USB with budget: " + eshop.findMostExpensiveUSBWithBudget(30));
+        int[] keyboards2 = {40, 50, 60};
+        int[] usbs2 = {8, 12};
+        ElectronicsShop eshop2 = new ElectronicsShop(keyboards2, usbs2);
+        System.out.println("Max sum that Markus can spend: " + eshop2.findMaxSpent(60));
     }
 
 }

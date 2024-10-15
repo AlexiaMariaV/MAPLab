@@ -41,4 +41,17 @@ public class ElectronicsShop {
         }
         return maxUSBWithBudget;
     }
+
+    public int findMaxSpent(int budget){
+        int maxSpent = -1;
+        for(int i = 0; i < keyboards.length; i++){
+            for(int j = 0; j < usbs.length; j++){
+                int price = keyboards[i] + usbs[j];
+                if(price <= budget && price > maxSpent){
+                    maxSpent = price;
+                }
+            }
+        }
+        return maxSpent;
+    }
 }
