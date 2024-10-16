@@ -3,6 +3,20 @@ public class Main {
         int[] studentGrades = {29, 37, 38, 41, 84, 67};
         Grades grades = new Grades(studentGrades);
         int[] failingGrades = grades.getFailingGrades();
+        int[] studentGrades2 = {29, 37, 38, 41, 84, 67};
+        Grades grades2 = new Grades(studentGrades2);
+        int[] roundedGrades2 = grades2.getRoundedGrades();
+        Grades grades3 = new Grades(roundedGrades2);
+        int[] failingGrades3 = grades3.getFailingGrades();
+        System.out.print("Failing rounded grades: [");
+        for (int i = 0; i < failingGrades3.length; i++) {
+            System.out.print(failingGrades3[i]);
+            if (i < failingGrades3.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+
         System.out.print("Failing grades: [");
         for (int i = 0; i < failingGrades.length; i++) {
             System.out.print(failingGrades[i]);
@@ -27,7 +41,7 @@ public class Main {
 
 
 
-        int[] numbers = {4, 8, 3, 10, 17};
+        int[] numbers = {-4, 8, 3, 10, 17};
         Numbers numbersArray = new Numbers(numbers);
         System.out.println("Max number: " + numbersArray.maxNumber());
         System.out.println("Min number: " + numbersArray.minNumber());
@@ -51,7 +65,7 @@ public class Main {
         diff.showNumbers();
         int[] bigNums5 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
         BigNumber bnum5 = new BigNumber(bigNums5);
-        BigNumber product = BigNumber.multiply(bnum5,2);
+        BigNumber product = BigNumber.multiply(bnum5,1);
         System.out.println("Product: ");
         product.showNumbers();
         BigNumber division = BigNumber.divide(bnum5,2);
@@ -65,7 +79,7 @@ public class Main {
         System.out.println("Cheapest keyboard: " + eshop.findCheapestKeyboard());
         System.out.println("Most expensive item: " + eshop.findMostExpensive());
         System.out.println("Most expensive USB with budget: " + eshop.findMostExpensiveUSBWithBudget(30));
-        int[] keyboards2 = {40, 50, 60};
+        int[] keyboards2 = {60};
         int[] usbs2 = {8, 12};
         ElectronicsShop eshop2 = new ElectronicsShop(keyboards2, usbs2);
         System.out.println("Max sum that Markus can spend: " + eshop2.findMaxSpent(60));
